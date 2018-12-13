@@ -13,3 +13,5 @@ persist_with: felix_uploads_default_datagroup
 explore: forecast_test {}
 
 explore: sku_metrix_test {}
+
+explore: amz_upload_test {}
