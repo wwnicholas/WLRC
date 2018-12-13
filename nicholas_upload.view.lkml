@@ -117,6 +117,13 @@ view: nicholas_upload {
     sql: ${TABLE}."COUNTRY" ;;
   }
 
+  #ADDING
+  measure: Unique_Country {
+    type: count_distinct
+    sql: ${country} ;;
+  }
+  #
+
   dimension: ipaddress {
     type: string
     sql: ${TABLE}."IPADDRESS" ;;
