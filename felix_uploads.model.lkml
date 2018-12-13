@@ -14,4 +14,7 @@ explore: forecast_test {}
 
 explore: sku_metrix_test {}
 
-explore: amz_upload_test {}
+explore: amz_upload_test {
+
+
+}
