@@ -173,6 +173,21 @@ view: nicholas_upload {
     type: sum
     sql: ${calculate_team_submission} ;;
   }
+
+  measure: gender_female_count {
+    type: sum
+    sql: ${TABLE}."CALCULATE_FEMALE_COUNT" ;;
+  }
+
+  measure: gender_male_count {
+    type: sum
+    sql: ${TABLE}."CALCULATE_MALE_COUNT" ;;
+  }
+
+  measure: gender_other_count {
+    type: sum
+    sql: ${TABLE}."CALCULATE_OTHER_COUNT" ;;
+  }
 # Team Composition Tab Ends
 
 # Coach Demographic Tab Starts
