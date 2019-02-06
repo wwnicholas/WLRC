@@ -1,5 +1,12 @@
 view: nicholas_upload {
-  sql_table_name: FELIX_UPLOADS.NICHOLAS_UPLOAD ;;
+  sql_table_name: SALES_DB.FELIX_UPLOADS.NICHOLAS_UPLOAD ;;
+
+  dimension: responseid {
+    view_label: "Registration"
+    primary_key: yes #https://wonderworkshop.looker.com/sql/7kmnbpq6f7xr3j
+    type: string
+    sql: ${TABLE}."RESPONSEID" ;;
+  }
 
 # Registration Tab Starts
   dimension: referral {
@@ -23,12 +30,6 @@ view: nicholas_upload {
     view_label: "Registration"
     type: string
     sql: ${TABLE}."PID_AVAILABLE" ;;
-  }
-
-  dimension: responseid {
-    view_label: "Registration"
-    type: string
-    sql: ${TABLE}."RESPONSEID" ;;
   }
 
   dimension: status {

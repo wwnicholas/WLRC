@@ -1,7 +1,8 @@
 connection: "snowflakesales"
 
 # include all the views
-include: "*.view"
+include: "nlp_*.view"
+# include: "//sales_analytics/*.view"
 
 datagroup: felix_uploads_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
@@ -17,4 +18,13 @@ explore: sku_metrix_test {}
 explore: amz_upload_test {
 
 }
-explore: nicholas_upload {}
+
+# explore: wonder_league_robotics_competition {
+#   from: building
+#   view_name: building
+#   join: nicholas_upload {
+#     type: left_outer
+#     sql_on: ${building.pid} = ${nicholas_upload.pid} ;;
+#     relationship: one_to_many
+#   }
+# }
