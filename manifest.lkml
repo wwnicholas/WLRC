@@ -6,3 +6,7 @@ project_name: "felix_uploads"
 local_dependency: {
   project: "sales_analytics"
 }
+
+local_dependency: {
+  project: "shopify"
+}

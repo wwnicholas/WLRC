@@ -3,6 +3,7 @@ connection: "snowflakesales"
 # include all the views
 include: "nlp_*.view"
 # include: "//sales_analytics/*.view"
+include: "//shopify/transactions.view"
 
 datagroup: felix_uploads_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
