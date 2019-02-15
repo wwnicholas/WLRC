@@ -2,102 +2,102 @@ view: wlrc_data {
   sql_table_name: FELIX_UPLOADS.WLRC_DATA ;;
 
   dimension: calculate_12_14_team {
-    type: string
+    type: number
     sql: ${TABLE}."CALCULATE_12_14_TEAM" ;;
   }
 
   dimension: calculate_6_8_team {
-    type: string
+    type: number
     sql: ${TABLE}."CALCULATE_6_8_TEAM" ;;
   }
 
   dimension: calculate_9_11_team {
-    type: string
+    type: number
     sql: ${TABLE}."CALCULATE_9_11_TEAM" ;;
   }
 
   dimension: calculate_aged_10 {
-    type: string
+    type: number
     sql: ${TABLE}."CALCULATE_AGED_10" ;;
   }
 
   dimension: calculate_aged_11 {
-    type: string
+    type: number
     sql: ${TABLE}."CALCULATE_AGED_11" ;;
   }
 
   dimension: calculate_aged_11_12 {
-    type: string
+    type: number
     sql: ${TABLE}."CALCULATE_AGED_11_12" ;;
   }
 
   dimension: calculate_aged_12 {
-    type: string
+    type: number
     sql: ${TABLE}."CALCULATE_AGED_12" ;;
   }
 
   dimension: calculate_aged_13 {
-    type: string
+    type: number
     sql: ${TABLE}."CALCULATE_AGED_13" ;;
   }
 
   dimension: calculate_aged_14 {
-    type: string
+    type: number
     sql: ${TABLE}."CALCULATE_AGED_14" ;;
   }
 
   dimension: calculate_aged_5_6 {
-    type: string
+    type: number
     sql: ${TABLE}."CALCULATE_AGED_5_6" ;;
   }
 
   dimension: calculate_aged_6 {
-    type: string
+    type: number
     sql: ${TABLE}."CALCULATE_AGED_6" ;;
   }
 
   dimension: calculate_aged_7 {
-    type: string
+    type: number
     sql: ${TABLE}."CALCULATE_AGED_7" ;;
   }
 
   dimension: calculate_aged_8 {
-    type: string
+    type: number
     sql: ${TABLE}."CALCULATE_AGED_8" ;;
   }
 
   dimension: calculate_aged_8_9 {
-    type: string
+    type: number
     sql: ${TABLE}."CALCULATE_AGED_8_9" ;;
   }
 
   dimension: calculate_aged_9 {
-    type: string
+    type: number
     sql: ${TABLE}."CALCULATE_AGED_9" ;;
   }
 
   dimension: calculate_female_count {
-    type: string
+    type: number
     sql: ${TABLE}."CALCULATE_FEMALE_COUNT" ;;
   }
 
   dimension: calculate_male_count {
-    type: string
+    type: number
     sql: ${TABLE}."CALCULATE_MALE_COUNT" ;;
   }
 
   dimension: calculate_other_count {
-    type: string
+    type: number
     sql: ${TABLE}."CALCULATE_OTHER_COUNT" ;;
   }
 
   dimension: calculate_team_members {
-    type: string
+    type: number
     sql: ${TABLE}."CALCULATE_TEAM_MEMBERS" ;;
   }
 
   dimension: calculate_team_submission {
-    type: string
+    type: number
     sql: ${TABLE}."CALCULATE_TEAM_SUBMISSION" ;;
   }
 
@@ -117,17 +117,17 @@ view: wlrc_data {
   }
 
   dimension: coach_ages_12_14 {
-    type: string
+    type: number
     sql: ${TABLE}."COACH_AGES_12_14" ;;
   }
 
   dimension: coach_ages_6_8 {
-    type: string
+    type: number
     sql: ${TABLE}."COACH_AGES_6_8" ;;
   }
 
   dimension: coach_ages_9_11 {
-    type: string
+    type: number
     sql: ${TABLE}."COACH_AGES_9_11" ;;
   }
 
@@ -157,32 +157,32 @@ view: wlrc_data {
   }
 
   dimension: coach_recurring_y1 {
-    type: string
+    type: number
     sql: ${TABLE}."COACH_RECURRING_Y1" ;;
   }
 
   dimension: coach_recurring_y2 {
-    type: string
+    type: number
     sql: ${TABLE}."COACH_RECURRING_Y2" ;;
   }
 
   dimension: coach_recurring_y3 {
-    type: string
+    type: number
     sql: ${TABLE}."COACH_RECURRING_Y3" ;;
   }
 
   dimension: coach_team_count {
-    type: string
+    type: number
     sql: ${TABLE}."COACH_TEAM_COUNT" ;;
   }
 
   dimension: coach_team_help {
-    type: string
+    type: number
     sql: ${TABLE}."COACH_TEAM_HELP" ;;
   }
 
   dimension: coach_total_kids {
-    type: string
+    type: number
     sql: ${TABLE}."COACH_TOTAL_KIDS" ;;
   }
 
