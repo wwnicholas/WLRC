@@ -18,3 +18,4 @@ explore: amz_upload_test {
 
 }
 explore: nicholas_upload {}
+explore: wlrc_data {}
