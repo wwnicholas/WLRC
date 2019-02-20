@@ -225,62 +225,132 @@ view: wlrc_data {
     sql: ${TABLE}."CALCULATE_9_11_TEAM" ;;
   }
 
-  measure: calculate_aged_10 {
-    view_label: "Age Category Count"
-    type: sum
-    sql: ${TABLE}."CALCULATE_AGED_10" ;;
-  }
-
-  measure: calculate_aged_11 {
-    view_label: "Age Category Count"
-    type: sum
-    sql: ${TABLE}."CALCULATE_AGED_11" ;;
-  }
-
-  measure: calculate_aged_11_12 {
-    view_label: "Age Category Count"
-    type: sum
-    sql: ${TABLE}."CALCULATE_AGED_11_12" ;;
-  }
-
-  measure: calculate_aged_12 {
-    view_label: "Age Category Count"
-    type: sum
-    sql: ${TABLE}."CALCULATE_AGED_12" ;;
-  }
-
-  measure: calculate_aged_13 {
-    view_label: "Age Category Count"
-    type: sum
-    sql: ${TABLE}."CALCULATE_AGED_13" ;;
-  }
-
-  measure: calculate_aged_14 {
-    view_label: "Age Category Count"
-    type: sum
-    sql: ${TABLE}."CALCULATE_AGED_14" ;;
-  }
-
-  measure: calculate_aged_5_6 {
+  measure: total_aged_5_6 {
+    hidden: yes
     view_label: "Age Category Count"
     type: sum
     sql: ${TABLE}."CALCULATE_AGED_5_6" ;;
   }
 
-  measure: calculate_aged_6 {
+  measure: total_aged_6 {
+    hidden: yes
     view_label: "Age Category Count"
     type: sum
-    sql: ${TABLE}."CALCULATE_AGm
-  measure: calculate_aged_8_9 {
+    sql: ${TABLE}."CALCULATE_AGED_6" ;;
+  }
+
+  measure: total_aged_7 {
+    hidden: yes
+    view_label: "Age Category Count"
+    type: sum
+    sql: ${TABLE}."CALCULATE_AGED_7" ;;
+  }
+
+  measure: total_aged_8 {
+    hidden: yes
+    view_label: "Age Category Count"
+    type: sum
+    sql: ${TABLE}."CALCULATE_AGED_8" ;;
+  }
+
+  measure: total_aged_8_9 {
+    hidden: yes
     view_label: "Age Category Count"
     type: sum
     sql: ${TABLE}."CALCULATE_AGED_8_9" ;;
   }
 
-  measure: calculate_aged_9 {
+  measure: total_aged_9 {
+    hidden: yes
     view_label: "Age Category Count"
     type: sum
     sql: ${TABLE}."CALCULATE_AGED_9" ;;
+  }
+
+  measure: total_aged_10 {
+    hidden: yes
+    view_label: "Age Category Count"
+    type: sum
+    sql: ${TABLE}."CALCULATE_AGED_10" ;;
+  }
+
+  measure: total_aged_11 {
+    hidden: yes
+    view_label: "Age Category Count"
+    type: sum
+    sql: ${TABLE}."CALCULATE_AGED_11" ;;
+  }
+
+  measure: total_aged_11_12 {
+    hidden: yes
+    view_label: "Age Category Count"
+    type: sum
+    sql: ${TABLE}."CALCULATE_AGED_11_12" ;;
+  }
+
+  measure: total_aged_12 {
+    hidden: yes
+    view_label: "Age Category Count"
+    type: sum
+    sql: ${TABLE}."CALCULATE_AGED_12" ;;
+  }
+
+  measure: total_aged_13 {
+    hidden: yes
+    view_label: "Age Category Count"
+    type: sum
+    sql: ${TABLE}."CALCULATE_AGED_13" ;;
+  }
+
+  measure: total_aged_14 {
+    hidden: yes
+    view_label: "Age Category Count"
+    type: sum
+    sql: ${TABLE}."CALCULATE_AGED_14" ;;
+  }
+
+  measure: total_participants_aged_weighted {
+    view_label: "Age Category Count"
+    type: number
+    sql:
+    ${total_aged_5_6}*5.5+
+    ${total_aged_6}*6+
+    ${total_aged_7}*7+
+    ${total_aged_8}*8+
+    ${total_aged_8_9}*8.5+
+    ${total_aged_9}*9+
+    ${total_aged_10}*10+
+    ${total_aged_11}*11+
+    ${total_aged_11_12}*11.5+
+    ${total_aged_12}*12+
+    ${total_aged_13}*13+
+    ${total_aged_14}*14
+    ;;
+  }
+
+  measure: total_participants_age_count {
+    view_label: "Age Category Count"
+    type: number
+    sql:
+    ${total_aged_5_6}+
+    ${total_aged_6}+
+    ${total_aged_7}+
+    ${total_aged_8}+
+    ${total_aged_8_9}+
+    ${total_aged_9}+
+    ${total_aged_10}+
+    ${total_aged_11}+
+    ${total_aged_11_12}+
+    ${total_aged_12}+
+    ${total_aged_13}+
+    ${total_aged_14}
+    ;;
+  }
+
+  measure: participants_average_age {
+    view_label: "Age Category Count"
+    type: number
+    sql:  1.0*${total_participants_aged_weighted}/nullif(${total_participants_age_count},0) ;;
   }
 ### AGE CATEGORY COUNT ENDS ###
 
