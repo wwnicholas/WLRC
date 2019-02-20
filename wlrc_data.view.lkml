@@ -68,6 +68,7 @@ view: wlrc_data {
   dimension: state {
     view_label: "Location"
     type: string
+    map_layer_name: us_states
     sql: ${TABLE}."STATE" ;;
   }
 
@@ -309,8 +310,9 @@ view: wlrc_data {
     sql: ${TABLE}."CALCULATE_AGED_14" ;;
   }
 
-  measure: total_participants_aged_weighted {
+  measure: total_participants_age_weighted {
     view_label: "Age Category Count"
+    hidden: yes
     type: number
     sql:
     ${total_aged_5_6}*5.5+
@@ -329,6 +331,7 @@ view: wlrc_data {
   }
 
   measure: total_participants_age_count {
+    hidden: yes
     view_label: "Age Category Count"
     type: number
     sql:
@@ -350,7 +353,8 @@ view: wlrc_data {
   measure: participants_average_age {
     view_label: "Age Category Count"
     type: number
-    sql:  1.0*${total_participants_aged_weighted}/nullif(${total_participants_age_count},0) ;;
+    sql:  1.0*${total_participants_age_weighted}/nullif(${total_participants_age_count},0) ;;
+    value_format: "0.00"
   }
 ### AGE CATEGORY COUNT ENDS ###
 
