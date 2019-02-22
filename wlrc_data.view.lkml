@@ -130,6 +130,12 @@ view: wlrc_data {
 ### US SCHOOL ENDS ###
 
 ### COACH DEMOGRAPHIC START ###
+  measure: gravity {
+    view_label: "Coach Demographic"
+    type: sum
+    sql: ${TABLE}."ROBOTS" ;;
+  }
+
   dimension: coach_demographic_email {
     view_label: "Coach Demographic"
     type: string
@@ -414,11 +420,6 @@ view: wlrc_data {
     type: string
     sql: ${TABLE}."REFERRAL" ;;
 }
-
-  dimension: robots {
-    type: string
-    sql: ${TABLE}."ROBOTS" ;;
-  }
 
   measure: count {
     type: count
