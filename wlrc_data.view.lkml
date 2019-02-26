@@ -142,6 +142,12 @@ view: wlrc_data {
     sql: ${TABLE}."COACH_DEMOGRAPHIC_EMAIL" ;;
   }
 
+  measure: unique_coach_email {
+    view_label: "Coach Demographic"
+    type: count_distinct
+    sql: ${TABLE}."COACH_DEMOGRAPHIC_EMAIL" ;;
+  }
+
   dimension: coach_demographic_firstname {
     view_label: "Coach Demographic"
     type: string
@@ -375,6 +381,12 @@ view: wlrc_data {
     view_label: "Team Count"
     type: sum
     sql: ${TABLE}."CALCULATE_TEAM_SUBMISSION" ;;
+  }
+
+  measure: team_submission_1718 {
+    view_label: "Team Count"
+    type: sum
+    sql: ${TABLE}."CALCULATE_TEAM_SUBMISSION" where ${Year}="1718" ;;
   }
 
   measure: coach_team_count {
