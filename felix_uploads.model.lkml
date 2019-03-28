@@ -19,6 +19,8 @@ explore: amz_upload_test {}
 
 explore: nicholas_upload {}
 
+explore: wlrc_webinar {}
+
 explore: wlrc_data {
   join: building {
     type: left_outer
