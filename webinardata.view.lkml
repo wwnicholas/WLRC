@@ -1,14 +1,89 @@
-view: wlrc_webinar {
-  sql_table_name: FELIX_UPLOADS.WLRC_WEBINAR ;;
+view: webinardata {
+  sql_table_name: FELIX_UPLOADS.WEBINARDATA ;;
 
-  dimension: date_viewed {
+  dimension: cdv_email {
     type: string
-    sql: ${TABLE}."DATE_VIEWED" ;;
+    sql: ${TABLE}."CDV_EMAIL" ;;
   }
 
-  dimension: email {
+  dimension: cvl_date_viewed {
     type: string
-    sql: ${TABLE}."EMAIL" ;;
+    sql: ${TABLE}."CVL_DATE_VIEWED" ;;
+  }
+
+  dimension: elr_att_email {
+    type: string
+    sql: ${TABLE}."ELR_ATT_EMAIL" ;;
+  }
+
+  dimension: elr_att_phone {
+    type: string
+    sql: ${TABLE}."ELR_ATT_PHONE" ;;
+  }
+
+  dimension: elr_att_screenname {
+    type: string
+    sql: ${TABLE}."ELR_ATT_SCREENNAME" ;;
+  }
+
+  dimension: elr_reg_country {
+    type: string
+    sql: ${TABLE}."ELR_REG_COUNTRY" ;;
+  }
+
+  dimension: elr_reg_date {
+    type: string
+    sql: ${TABLE}."ELR_REG_DATE" ;;
+  }
+
+  dimension: elr_reg_email {
+    type: string
+    sql: ${TABLE}."ELR_REG_EMAIL" ;;
+  }
+
+  dimension: elr_reg_job_title {
+    type: string
+    sql: ${TABLE}."ELR_REG_JOB_TITLE" ;;
+  }
+
+  dimension: elr_reg_name_first {
+    type: string
+    sql: ${TABLE}."ELR_REG_NAME_FIRST" ;;
+  }
+
+  dimension: elr_reg_name_last {
+    type: string
+    sql: ${TABLE}."ELR_REG_NAME_LAST" ;;
+  }
+
+  dimension: elr_reg_organization {
+    type: string
+    sql: ${TABLE}."ELR_REG_ORGANIZATION" ;;
+  }
+
+  dimension: elr_reg_phone {
+    type: string
+    sql: ${TABLE}."ELR_REG_PHONE" ;;
+  }
+
+  dimension: elr_reg_state {
+    type: string
+    sql: ${TABLE}."ELR_REG_STATE" ;;
+  }
+
+  dimension: elr_reg_zip_postal {
+    type: string
+    sql: ${TABLE}."ELR_REG_ZIP_POSTAL" ;;
+  }
+
+  dimension: filedate {
+    type: string
+    sql: ${TABLE}."FILEDATE" ;;
+  }
+
+  dimension: filetype {
+    type: string
+    sql: ${TABLE}."FILETYPE" ;;
   }
 
   dimension: mem_address_city {
@@ -43,11 +118,6 @@ view: wlrc_webinar {
 
   dimension: mem_email_1 {
     type: string
-    sql: ${TABLE}."MEM_EMAIL_1" ;;
-  }
-
-  measure: count_distint_email {
-    type: count_distinct
     sql: ${TABLE}."MEM_EMAIL_1" ;;
   }
 
@@ -131,9 +201,9 @@ view: wlrc_webinar {
     sql: ${TABLE}."MEM_PARENT_INST_ID_PIN" ;;
   }
 
-  dimension: mem_parent_inst_mail_zip {
+  dimension: mem_parent_inst_mail_zip_4 {
     type: string
-    sql: ${TABLE}."MEM_PARENT_INST_MAIL_ZIP" ;;
+    sql: ${TABLE}."MEM_PARENT_INST_MAIL_ZIP_4" ;;
   }
 
   dimension: mem_parent_inst_mailing_address {
@@ -181,9 +251,9 @@ view: wlrc_webinar {
     sql: ${TABLE}."MEM_ROLES" ;;
   }
 
-  dimension: mem_school_wide_title_1 {
+  dimension: mem_school_wide_titlei {
     type: string
-    sql: ${TABLE}."MEM_SCHOOL_WIDE_TITLE_1" ;;
+    sql: ${TABLE}."MEM_SCHOOL_WIDE_TITLEI" ;;
   }
 
   dimension: mem_subjects {
@@ -216,18 +286,13 @@ view: wlrc_webinar {
     sql: ${TABLE}."MEM_WEALTH_SCORE" ;;
   }
 
-  dimension: name_community {
+  dimension: webinar {
     type: string
-    sql: ${TABLE}."NAME_COMMUNITY" ;;
-  }
-
-  dimension: name_webinar {
-    type: string
-    sql: ${TABLE}."NAME_WEBINAR" ;;
+    sql: ${TABLE}."WEBINAR" ;;
   }
 
   measure: count {
     type: count
-    drill_fields: [mem_matched_inst_name, mem_parent_inst_name]
+    drill_fields: [mem_matched_inst_name, mem_parent_inst_name, elr_att_screenname]
   }
 }

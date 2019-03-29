@@ -37,6 +37,11 @@ view: buildingwebinar {
     sql: ${TABLE}."EMAIL" ;;
   }
 
+  measure: count_distint_building_email {
+    type: count_distinct
+    sql: ${TABLE}."EMAIL" ;;
+  }
+
   dimension: enrollment {
     type: string
     sql: ${TABLE}."ENROLLMENT" ;;
