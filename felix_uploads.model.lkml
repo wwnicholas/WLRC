@@ -27,7 +27,19 @@ explore: wlrc_webinar {
   }
 }
 
-explore: buildingwebinar {}
+explore: buildingwebinar {
+  join: building {
+    type: left_outer
+    sql_on:  ${buildingwebinar.identity_details_pid}=${building.pid} ;;
+    relationship: many_to_one
+  }
+
+  join: tag_institutions_with_parents {
+    relationship: one_to_one
+    type: left_outer
+    sql_on: ${building.pid}=${tag_institutions_with_parents.pid} ;;
+  }
+}
 
 explore: wlrc_data {
   join: building {
