@@ -28,6 +28,7 @@ view: webinardata {
 
   dimension: elr_reg_country {
     type: string
+    map_layer_name: countries
     sql: ${TABLE}."ELR_REG_COUNTRY" ;;
   }
 
@@ -38,6 +39,16 @@ view: webinardata {
 
   dimension: elr_reg_email {
     type: string
+    sql: ${TABLE}."ELR_REG_EMAIL" ;;
+  }
+
+  dimension: Upper_elr_reg_email {
+    type: string
+    sql: UPPER(${TABLE}."ELR_REG_EMAIL") ;;
+  }
+
+  measure: count_distint_ELR_registered_email {
+    type: count_distinct
     sql: ${TABLE}."ELR_REG_EMAIL" ;;
   }
 
@@ -71,6 +82,11 @@ view: webinardata {
     sql: ${TABLE}."ELR_REG_STATE" ;;
   }
 
+  dimension: elr_reg_US_state {
+    type: string
+    sql: ${TABLE}."ELR_REG_STATE";;
+  }
+
   dimension: elr_reg_zip_postal {
     type: string
     sql: ${TABLE}."ELR_REG_ZIP_POSTAL" ;;
@@ -93,6 +109,7 @@ view: webinardata {
 
   dimension: mem_address_country {
     type: string
+    map_layer_name: countries
     sql: ${TABLE}."MEM_ADDRESS_COUNTRY" ;;
   }
 
@@ -163,6 +180,7 @@ view: webinardata {
 
   dimension: mem_mailing_state {
     type: string
+    map_layer_name: us_states
     sql: ${TABLE}."MEM_MAILING_STATE" ;;
   }
 
