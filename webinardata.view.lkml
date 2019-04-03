@@ -64,13 +64,17 @@ view: webinardata {
       when: {
         sql:
         ${TABLE}."ELR_REG_COUNTRY" = 'Australia' OR
-        ${TABLE}."ELR_REG_COUNTRY" = 'AUSTRALIA';; label: "AU" }
+        ${TABLE}."ELR_REG_COUNTRY" = 'AUSTRALIA' OR
+        ${TABLE}."ELR_REG_COUNTRY" = 'australia';; label: "AU" }
       when: {
         sql: ${TABLE}."ELR_REG_COUNTRY" = 'Austria' ;; label: "AT" }
       when: {
         sql: ${TABLE}."ELR_REG_COUNTRY" = 'Azerbaijan' ;; label: "AZ" }
       when: {
-        sql: ${TABLE}."ELR_REG_COUNTRY" = 'Bahamas' ;; label: "BS" }
+        sql:
+        ${TABLE}."ELR_REG_COUNTRY" = 'Bahamas' OR
+        ${TABLE}."ELR_REG_COUNTRY" = 'BAHAMAS' OR
+        ${TABLE}."ELR_REG_COUNTRY" = 'The Bahamas';; label: "BS" }
       when: {
         sql: ${TABLE}."ELR_REG_COUNTRY" = 'Bahrain' ;; label: "BH" }
       when: {
@@ -96,7 +100,9 @@ view: webinardata {
       when: {
         sql: ${TABLE}."ELR_REG_COUNTRY" = 'Bouvet Island' ;; label: "BV" }
       when: {
-        sql: ${TABLE}."ELR_REG_COUNTRY" = 'Brazil' ;; label: "BR" }
+        sql:
+        ${TABLE}."ELR_REG_COUNTRY" = 'Brazil' OR
+        ${TABLE}."ELR_REG_COUNTRY" = 'BraZil';; label: "BR" }
       when: {
         sql: ${TABLE}."ELR_REG_COUNTRY" = 'British Indian Ocean Territory' ;; label: "IO" }
       when: {
@@ -134,7 +140,9 @@ view: webinardata {
       when: {
         sql: ${TABLE}."ELR_REG_COUNTRY" = 'Christmas Island' ;; label: "CX" }
       when: {
-        sql: ${TABLE}."ELR_REG_COUNTRY" = 'Colombia' ;; label: "CO" }
+        sql:
+        ${TABLE}."ELR_REG_COUNTRY" = 'Colombia' OR
+        ${TABLE}."ELR_REG_COUNTRY" = 'colombia';; label: "CO" }
       when: {
         sql: ${TABLE}."ELR_REG_COUNTRY" = 'Comoros' ;; label: "KM" }
       when: {
@@ -142,7 +150,9 @@ view: webinardata {
       when: {
         sql: ${TABLE}."ELR_REG_COUNTRY" = 'Cook Islands' ;; label: "CK" }
       when: {
-        sql: ${TABLE}."ELR_REG_COUNTRY" = 'Costa Rica' ;; label: "CR" }
+        sql:
+        ${TABLE}."ELR_REG_COUNTRY" = 'Costa Rica' OR
+        ${TABLE}."ELR_REG_COUNTRY" = 'Costa rica';; label: "CR" }
       when: {
         sql: ${TABLE}."ELR_REG_COUNTRY" = 'Croatia' ;; label: "HR" }
       when: {
@@ -160,7 +170,9 @@ view: webinardata {
       when: {
         sql: ${TABLE}."ELR_REG_COUNTRY" = 'Dominican Republic' ;; label: "DO" }
       when: {
-        sql: ${TABLE}."ELR_REG_COUNTRY" = 'Ecuador' ;; label: "EC" }
+        sql:
+        ${TABLE}."ELR_REG_COUNTRY" = 'Ecuador' OR
+        ${TABLE}."ELR_REG_COUNTRY" = 'ECUADOR';; label: "EC" }
       when: {
         sql:
         ${TABLE}."ELR_REG_COUNTRY" = 'Egypt' OR
@@ -184,7 +196,9 @@ view: webinardata {
       when: {
         sql: ${TABLE}."ELR_REG_COUNTRY" = 'Finland' ;; label: "FI" }
       when: {
-        sql: ${TABLE}."ELR_REG_COUNTRY" = 'France' ;; label: "FR" }
+        sql:
+        ${TABLE}."ELR_REG_COUNTRY" = 'France' OR
+        ${TABLE}."ELR_REG_COUNTRY" = 'france';; label: "FR" }
       when: {
         sql: ${TABLE}."ELR_REG_COUNTRY" = 'French Guiana' ;; label: "GF" }
       when: {
@@ -236,11 +250,13 @@ view: webinardata {
       when: {
         sql: ${TABLE}."ELR_REG_COUNTRY" = 'Iceland' ;; label: "IS" }
       when: {
-        sql: ${TABLE}."ELR_REG_COUNTRY" = 'India' ;; label: "IN" }
+        sql:
+        ${TABLE}."ELR_REG_COUNTRY" = 'India' OR
+        ${TABLE}."ELR_REG_COUNTRY" = 'india';; label: "IN" }
       when: {
         sql: ${TABLE}."ELR_REG_COUNTRY" = 'Indonesia' ;; label: "ID" }
       when: {
-        sql: ${TABLE}."ELR_REG_COUNTRY" = '"Iran' ;; label: "IR" }
+        sql: ${TABLE}."ELR_REG_COUNTRY" = 'Iran' ;; label: "IR" }
       when: {
         sql: ${TABLE}."ELR_REG_COUNTRY" = 'Iraq' ;; label: "IQ" }
       when: {
@@ -250,6 +266,7 @@ view: webinardata {
       when: {
         sql:
         ${TABLE}."ELR_REG_COUNTRY" = 'Israel' OR
+        ${TABLE}."ELR_REG_COUNTRY" = 'ISRAEL' OR
         ${TABLE}."ELR_REG_COUNTRY" = 'israel';; label: "IL" }
       when: {
         sql: ${TABLE}."ELR_REG_COUNTRY" = 'Italy' ;; label: "IT" }
@@ -316,7 +333,8 @@ view: webinardata {
       when: {
         sql:
         ${TABLE}."ELR_REG_COUNTRY" = 'Mexico' OR
-        ${TABLE}."ELR_REG_COUNTRY" = 'MÃ©xico' ;; label: "MX" }
+        ${TABLE}."ELR_REG_COUNTRY" = 'MÃ©xico' OR
+        ${TABLE}."ELR_REG_COUNTRY" = 'mexico';; label: "MX" }
       when: {
         sql: ${TABLE}."ELR_REG_COUNTRY" = 'Monaco' ;; label: "MC" }
       when: {
@@ -338,13 +356,19 @@ view: webinardata {
       when: {
         sql: ${TABLE}."ELR_REG_COUNTRY" = 'Nepal' ;; label: "NP" }
       when: {
-        sql: ${TABLE}."ELR_REG_COUNTRY" = 'Netherlands' ;; label: "NL" }
+        sql:
+        ${TABLE}."ELR_REG_COUNTRY" = 'Netherlands' OR
+        ${TABLE}."ELR_REG_COUNTRY" = 'Nederland';; label: "NL" }
       when: {
         sql: ${TABLE}."ELR_REG_COUNTRY" = 'New Caledonia' ;; label: "NC" }
       when: {
-        sql: ${TABLE}."ELR_REG_COUNTRY" = 'New Zealand' ;; label: "NZ" }
+        sql:
+        ${TABLE}."ELR_REG_COUNTRY" = 'New Zealand' OR
+        ${TABLE}."ELR_REG_COUNTRY" = 'new zealand';; label: "NZ" }
       when: {
-        sql: ${TABLE}."ELR_REG_COUNTRY" = 'Nicaragua' ;; label: "NI" }
+        sql:
+        ${TABLE}."ELR_REG_COUNTRY" = 'Nicaragua' OR
+        ${TABLE}."ELR_REG_COUNTRY" = 'NIcaragua';; label: "NI" }
       when: {
         sql: ${TABLE}."ELR_REG_COUNTRY" = 'Niger' ;; label: "NE" }
       when: {
@@ -362,11 +386,14 @@ view: webinardata {
       when: {
         sql:
         ${TABLE}."ELR_REG_COUNTRY" = 'Pakistan' OR
-        ${TABLE}."ELR_REG_COUNTRY" = 'PAKISTAN' ;; label: "PK" }
+        ${TABLE}."ELR_REG_COUNTRY" = 'PAKISTAN' OR
+        ${TABLE}."ELR_REG_COUNTRY" = 'pakistan';; label: "PK" }
       when: {
         sql: ${TABLE}."ELR_REG_COUNTRY" = 'Palau' ;; label: "PW" }
       when: {
-        sql: ${TABLE}."ELR_REG_COUNTRY" = 'Panama' ;; label: "PA" }
+        sql:
+        ${TABLE}."ELR_REG_COUNTRY" = 'Panama' OR
+        ${TABLE}."ELR_REG_COUNTRY" = 'panama';; label: "PA" }
       when: {
         sql: ${TABLE}."ELR_REG_COUNTRY" = 'Papua New Guinea' ;; label: "PG" }
       when: {
@@ -452,7 +479,9 @@ view: webinardata {
       when: {
         sql: ${TABLE}."ELR_REG_COUNTRY" = 'Taiwan' ;; label: "TW" }
       when: {
-        sql: ${TABLE}."ELR_REG_COUNTRY" = 'Thailand' ;; label: "TH" }
+        sql:
+        ${TABLE}."ELR_REG_COUNTRY" = 'Thailand' OR
+        ${TABLE}."ELR_REG_COUNTRY" = 'thailand';; label: "TH" }
       when: {
         sql: ${TABLE}."ELR_REG_COUNTRY" = 'Togo' ;; label: "TG" }
       when: {
@@ -460,13 +489,17 @@ view: webinardata {
       when: {
         sql: ${TABLE}."ELR_REG_COUNTRY" = 'Tonga' ;; label: "TO" }
       when: {
-        sql: ${TABLE}."ELR_REG_COUNTRY" = 'Trinidad and Tobago' ;; label: "TT" }
+        sql:
+        ${TABLE}."ELR_REG_COUNTRY" = 'Trinidad and Tobago' OR
+        ${TABLE}."ELR_REG_COUNTRY" = 'Trinidad & Tobago' OR
+        ${TABLE}."ELR_REG_COUNTRY" = 'Trinidad';; label: "TT" }
       when: {
         sql: ${TABLE}."ELR_REG_COUNTRY" = 'Tunisia' ;; label: "TN" }
       when: {
         sql:
         ${TABLE}."ELR_REG_COUNTRY" = 'Turkey' OR
-        ${TABLE}."ELR_REG_COUNTRY" = 'TURKEY';; label: "TR" }
+        ${TABLE}."ELR_REG_COUNTRY" = 'TURKEY' OR
+        ${TABLE}."ELR_REG_COUNTRY" = 'turkey';; label: "TR" }
       when: {
         sql: ${TABLE}."ELR_REG_COUNTRY" = 'TURKEY' ;; label: "TR" }
       when: {
@@ -490,7 +523,9 @@ view: webinardata {
       when: {
         sql: ${TABLE}."ELR_REG_COUNTRY" = 'United Kingdom' ;; label: "GB" }
       when: {
-        sql: ${TABLE}."ELR_REG_COUNTRY" = 'UK' ;; label: "GB" }
+        sql:
+        ${TABLE}."ELR_REG_COUNTRY" = 'UK' OR
+        ${TABLE}."ELR_REG_COUNTRY" = 'Uk';; label: "GB" }
       when: {
         sql:
         ${TABLE}."ELR_REG_COUNTRY" = 'United States' OR
@@ -502,9 +537,15 @@ view: webinardata {
         ${TABLE}."ELR_REG_COUNTRY" = 'U.S.A' OR
         ${TABLE}."ELR_REG_COUNTRY" = 'usa' OR
         ${TABLE}."ELR_REG_COUNTRY" = 'us' OR
+        ${TABLE}."ELR_REG_COUNTRY" = 'Pennsylvania' OR
         ${TABLE}."ELR_REG_COUNTRY" = 'U.S. Virgin Islands' OR
         ${TABLE}."ELR_REG_COUNTRY" = 'Us' OR
-        ${TABLE}."ELR_REG_COUNTRY" = 'America';; label: "US" }
+        ${TABLE}."ELR_REG_COUNTRY" = 'America' OR
+        ${TABLE}."ELR_REG_COUNTRY" = 'Unites States' OR
+        ${TABLE}."ELR_REG_COUNTRY" = 'UsA' OR
+        ${TABLE}."ELR_REG_COUNTRY" = 'United STates' OR
+        ${TABLE}."ELR_REG_COUNTRY" = 'Uniter States' OR
+        ${TABLE}."ELR_REG_COUNTRY" = 'CA';; label: "US" }
       when: {
         sql: ${TABLE}."ELR_REG_COUNTRY" = 'United States Minor Outlying Islands' ;; label: "UM" }
       when: {
