@@ -8,7 +8,7 @@ view: webinardata {
 
   dimension: cvl_date_viewed {
     type: string
-    sql: ${TABLE}."CVL_DATE_VIEWED" ;;
+    sql: DATEADD(day, ${TABLE}."CVL_DATE_VIEWED", DATE_FROM_PARTS(1900, 1, 1)) ;;
   }
 
   dimension: elr_att_email {
@@ -569,7 +569,7 @@ view: webinardata {
 
   dimension: elr_reg_date {
     type: string
-    sql: ${TABLE}."ELR_REG_DATE" ;;
+    sql: DATEADD(day, ${TABLE}."ELR_REG_DATE", DATE_FROM_PARTS(1900, 1, 1)) ;;
   }
 
   dimension: elr_reg_email {
@@ -628,8 +628,8 @@ view: webinardata {
   }
 
   dimension: filedate {
-    type: string
-    sql: ${TABLE}."FILEDATE" ;;
+    type: date
+    sql: DATEADD(day, ${TABLE}."FILEDATE", DATE_FROM_PARTS(1900, 1, 1)) ;;
   }
 
   dimension: filetype {
