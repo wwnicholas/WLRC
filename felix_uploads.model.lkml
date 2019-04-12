@@ -27,6 +27,14 @@ explore: webinardata {
   }
 }
 
+explore: webinardata3 {
+#   join: buildingwebinar {
+#     type: left_outer
+#     sql_on: mem ${webinardata.mem_matched_inst_id}=${buildingwebinar.matched_inst_pin} ;;
+#     relationship: many_to_many
+#   }
+}
+
 explore: buildingwebinar {
   join: building {
     type: left_outer
