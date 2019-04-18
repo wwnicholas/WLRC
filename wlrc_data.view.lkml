@@ -142,6 +142,12 @@ view: wlrc_data {
     sql: ${TABLE}."COACH_DEMOGRAPHIC_EMAIL" ;;
   }
 
+  dimension: upper_coach_demographic_email {
+    view_label: "Coach Demographic"
+    type: string
+    sql: UPPER(${TABLE}."COACH_DEMOGRAPHIC_EMAIL") ;;
+  }
+
   measure: unique_coach_email {
     view_label: "Coach Demographic"
     type: count_distinct
