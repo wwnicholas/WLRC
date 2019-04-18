@@ -280,8 +280,10 @@ view: webinardata3 {
       when: {
         sql:
         ${TABLE}."REG_COUNTRY" = 'Australia' OR
+        ${TABLE}."REG_COUNTRY" = 'Australia ' OR
         ${TABLE}."REG_COUNTRY" = 'AUSTRALIA' OR
-        ${TABLE}."REG_COUNTRY" = 'australia';; label: "AU" }
+        ${TABLE}."REG_COUNTRY" = 'australia' OR
+        ${TABLE}."REG_COUNTRY" = 'Australua';; label: "AU" }
       when: {
         sql: ${TABLE}."REG_COUNTRY" = 'Austria' ;; label: "AT" }
       when: {
@@ -336,6 +338,7 @@ view: webinardata3 {
       when: {
         sql:
         ${TABLE}."REG_COUNTRY" = 'Canada' OR
+        ${TABLE}."REG_COUNTRY" = 'Canada ' OR
         ${TABLE}."REG_COUNTRY" = 'canada' OR
         ${TABLE}."REG_COUNTRY" = 'CANADA' OR
         ${TABLE}."REG_COUNTRY" = 'Cansda';; label: "CA" }
@@ -426,9 +429,14 @@ view: webinardata3 {
       when: {
         sql: ${TABLE}."REG_COUNTRY" = 'Gambia' ;; label: "GM" }
       when: {
-        sql: ${TABLE}."REG_COUNTRY" = 'Georgia' ;; label: "GE" }
+        sql:
+        ${TABLE}."REG_COUNTRY" = 'Georgia' OR
+        ${TABLE}."REG_COUNTRY" = 'Abkhazia';; label: "GE" }
       when: {
-        sql: ${TABLE}."REG_COUNTRY" = 'Germany' ;; label: "DE" }
+        sql:
+        ${TABLE}."REG_COUNTRY" = 'Germany' OR
+        ${TABLE}."REG_COUNTRY" = 'germany' OR
+        ${TABLE}."REG_COUNTRY" = 'Almanya';; label: "DE" }
       when: {
         sql: ${TABLE}."REG_COUNTRY" = 'Ghana' ;; label: "GH" }
       when: {
@@ -468,6 +476,7 @@ view: webinardata3 {
       when: {
         sql:
         ${TABLE}."REG_COUNTRY" = 'India' OR
+        ${TABLE}."REG_COUNTRY" = 'INDIA' OR
         ${TABLE}."REG_COUNTRY" = 'india';; label: "IN" }
       when: {
         sql: ${TABLE}."REG_COUNTRY" = 'Indonesia' ;; label: "ID" }
@@ -633,7 +642,9 @@ view: webinardata3 {
       when: {
         sql: ${TABLE}."REG_COUNTRY" = 'Romania' ;; label: "RO" }
       when: {
-        sql: ${TABLE}."REG_COUNTRY" = 'Russian Federation' ;; label: "RU" }
+        sql:
+        ${TABLE}."REG_COUNTRY" = 'Russian Federation' OR
+        ${TABLE}."REG_COUNTRY" = 'Russia';; label: "RU" }
       when: {
         sql: ${TABLE}."REG_COUNTRY" = 'Rwanda' ;; label: "RW" }
       when: {
@@ -729,7 +740,9 @@ view: webinardata3 {
       when: {
         sql: ${TABLE}."REG_COUNTRY" = 'Uganda' ;; label: "UG" }
       when: {
-        sql: ${TABLE}."REG_COUNTRY" = 'Ukraine' ;; label: "UA" }
+        sql:
+        ${TABLE}."REG_COUNTRY" = 'Ukraine' OR
+        ${TABLE}."REG_COUNTRY" = 'Ukraine ';; label: "UA" }
       when: {
         sql:
         ${TABLE}."REG_COUNTRY" = 'United Arab Emirates' OR
@@ -747,13 +760,14 @@ view: webinardata3 {
         ${TABLE}."REG_COUNTRY" = 'United States' OR
         ${TABLE}."REG_COUNTRY" = 'U.S' OR
         ${TABLE}."REG_COUNTRY" = 'united states' OR
+        ${TABLE}."REG_COUNTRY" = 'united States' OR
         ${TABLE}."REG_COUNTRY" = 'United States of America' OR
         ${TABLE}."REG_COUNTRY" = 'USA' OR
         ${TABLE}."REG_COUNTRY" = 'Usa' OR
         ${TABLE}."REG_COUNTRY" = 'U.S.A' OR
         ${TABLE}."REG_COUNTRY" = 'usa' OR
         ${TABLE}."REG_COUNTRY" = 'us' OR
-        ${TABLE}."REG_COUNTRY" = 'Pennsylvania' OR
+        ${TABLE}."REG_COUNTRY" = 'US' OR
         ${TABLE}."REG_COUNTRY" = 'U.S. Virgin Islands' OR
         ${TABLE}."REG_COUNTRY" = 'Us' OR
         ${TABLE}."REG_COUNTRY" = 'America' OR
@@ -761,7 +775,107 @@ view: webinardata3 {
         ${TABLE}."REG_COUNTRY" = 'UsA' OR
         ${TABLE}."REG_COUNTRY" = 'United STates' OR
         ${TABLE}."REG_COUNTRY" = 'Uniter States' OR
-        ${TABLE}."REG_COUNTRY" = 'CA';; label: "US" }
+        ${TABLE}."REG_COUNTRY" = 'CA' OR
+        ${TABLE}."REG_COUNTRY" = 'Alabama' OR
+        ${TABLE}."REG_COUNTRY" = 'Alaska' OR
+        ${TABLE}."REG_COUNTRY" = 'Arizona' OR
+        ${TABLE}."REG_COUNTRY" = 'Arkansas' OR
+        ${TABLE}."REG_COUNTRY" = 'California' OR
+        ${TABLE}."REG_COUNTRY" = 'Colorado' OR
+        ${TABLE}."REG_COUNTRY" = 'Connecticut' OR
+        ${TABLE}."REG_COUNTRY" = 'Delaware' OR
+        ${TABLE}."REG_COUNTRY" = 'Florida' OR
+        ${TABLE}."REG_COUNTRY" = 'Georgia' OR
+        ${TABLE}."REG_COUNTRY" = 'Hawaii' OR
+        ${TABLE}."REG_COUNTRY" = 'Idaho' OR
+        ${TABLE}."REG_COUNTRY" = 'Illinois' OR
+        ${TABLE}."REG_COUNTRY" = 'Indiana' OR
+        ${TABLE}."REG_COUNTRY" = 'Iowa' OR
+        ${TABLE}."REG_COUNTRY" = 'Kansas' OR
+        ${TABLE}."REG_COUNTRY" = 'Kentucky' OR
+        ${TABLE}."REG_COUNTRY" = 'Louisiana' OR
+        ${TABLE}."REG_COUNTRY" = 'Maine' OR
+        ${TABLE}."REG_COUNTRY" = 'Maryland' OR
+        ${TABLE}."REG_COUNTRY" = 'Massachusetts' OR
+        ${TABLE}."REG_COUNTRY" = 'Michigan' OR
+        ${TABLE}."REG_COUNTRY" = 'Minnesota' OR
+        ${TABLE}."REG_COUNTRY" = 'Mississippi' OR
+        ${TABLE}."REG_COUNTRY" = 'Missouri' OR
+        ${TABLE}."REG_COUNTRY" = 'Montana' OR
+        ${TABLE}."REG_COUNTRY" = 'Nebraska' OR
+        ${TABLE}."REG_COUNTRY" = 'Nevada' OR
+        ${TABLE}."REG_COUNTRY" = 'New Hampshire' OR
+        ${TABLE}."REG_COUNTRY" = 'New Jersey' OR
+        ${TABLE}."REG_COUNTRY" = 'New Mexico' OR
+        ${TABLE}."REG_COUNTRY" = 'New York' OR
+        ${TABLE}."REG_COUNTRY" = 'North Carolina' OR
+        ${TABLE}."REG_COUNTRY" = 'North Dakota' OR
+        ${TABLE}."REG_COUNTRY" = 'Ohio' OR
+        ${TABLE}."REG_COUNTRY" = 'Oklahoma' OR
+        ${TABLE}."REG_COUNTRY" = 'Oregon' OR
+        ${TABLE}."REG_COUNTRY" = 'Pennsylvania' OR
+        ${TABLE}."REG_COUNTRY" = 'Rhode Island' OR
+        ${TABLE}."REG_COUNTRY" = 'South Carolina' OR
+        ${TABLE}."REG_COUNTRY" = 'South Dakota' OR
+        ${TABLE}."REG_COUNTRY" = 'Tennessee' OR
+        ${TABLE}."REG_COUNTRY" = 'Texas' OR
+        ${TABLE}."REG_COUNTRY" = 'Utah' OR
+        ${TABLE}."REG_COUNTRY" = 'Vermont' OR
+        ${TABLE}."REG_COUNTRY" = 'Virginia' OR
+        ${TABLE}."REG_COUNTRY" = 'Washington' OR
+        ${TABLE}."REG_COUNTRY" = 'West Virginia' OR
+        ${TABLE}."REG_COUNTRY" = 'Wisconsin' OR
+        ${TABLE}."REG_COUNTRY" = 'Wyoming' OR
+        ${TABLE}."REG_COUNTRY" = 'alabama' OR
+        ${TABLE}."REG_COUNTRY" = 'alaska' OR
+        ${TABLE}."REG_COUNTRY" = 'arizona' OR
+        ${TABLE}."REG_COUNTRY" = 'arkansas' OR
+        ${TABLE}."REG_COUNTRY" = 'california' OR
+        ${TABLE}."REG_COUNTRY" = 'colorado' OR
+        ${TABLE}."REG_COUNTRY" = 'connecticut' OR
+        ${TABLE}."REG_COUNTRY" = 'delaware' OR
+        ${TABLE}."REG_COUNTRY" = 'florida' OR
+        ${TABLE}."REG_COUNTRY" = 'georgia' OR
+        ${TABLE}."REG_COUNTRY" = 'hawaii' OR
+        ${TABLE}."REG_COUNTRY" = 'idaho' OR
+        ${TABLE}."REG_COUNTRY" = 'illinois' OR
+        ${TABLE}."REG_COUNTRY" = 'indiana' OR
+        ${TABLE}."REG_COUNTRY" = 'iowa' OR
+        ${TABLE}."REG_COUNTRY" = 'kansas' OR
+        ${TABLE}."REG_COUNTRY" = 'kentucky' OR
+        ${TABLE}."REG_COUNTRY" = 'louisiana' OR
+        ${TABLE}."REG_COUNTRY" = 'maine' OR
+        ${TABLE}."REG_COUNTRY" = 'maryland' OR
+        ${TABLE}."REG_COUNTRY" = 'massachusetts' OR
+        ${TABLE}."REG_COUNTRY" = 'michigan' OR
+        ${TABLE}."REG_COUNTRY" = 'minnesota' OR
+        ${TABLE}."REG_COUNTRY" = 'mississippi' OR
+        ${TABLE}."REG_COUNTRY" = 'missouri' OR
+        ${TABLE}."REG_COUNTRY" = 'montana' OR
+        ${TABLE}."REG_COUNTRY" = 'nebraska' OR
+        ${TABLE}."REG_COUNTRY" = 'nevada' OR
+        ${TABLE}."REG_COUNTRY" = 'new hampshire' OR
+        ${TABLE}."REG_COUNTRY" = 'new jersey' OR
+        ${TABLE}."REG_COUNTRY" = 'new mexico' OR
+        ${TABLE}."REG_COUNTRY" = 'new york' OR
+        ${TABLE}."REG_COUNTRY" = 'north carolina' OR
+        ${TABLE}."REG_COUNTRY" = 'north dakota' OR
+        ${TABLE}."REG_COUNTRY" = 'ohio' OR
+        ${TABLE}."REG_COUNTRY" = 'oklahoma' OR
+        ${TABLE}."REG_COUNTRY" = 'oregon' OR
+        ${TABLE}."REG_COUNTRY" = 'pennsylvania' OR
+        ${TABLE}."REG_COUNTRY" = 'rhode island' OR
+        ${TABLE}."REG_COUNTRY" = 'south carolina' OR
+        ${TABLE}."REG_COUNTRY" = 'south dakota' OR
+        ${TABLE}."REG_COUNTRY" = 'tennessee' OR
+        ${TABLE}."REG_COUNTRY" = 'texas' OR
+        ${TABLE}."REG_COUNTRY" = 'utah' OR
+        ${TABLE}."REG_COUNTRY" = 'vermont' OR
+        ${TABLE}."REG_COUNTRY" = 'virginia' OR
+        ${TABLE}."REG_COUNTRY" = 'washington' OR
+        ${TABLE}."REG_COUNTRY" = 'west virginia' OR
+        ${TABLE}."REG_COUNTRY" = 'wisconsin' OR
+        ${TABLE}."REG_COUNTRY" = 'wyoming';; label: "US" }
       when: {
         sql: ${TABLE}."REG_COUNTRY" = 'United States Minor Outlying Islands' ;; label: "UM" }
       when: {
@@ -786,6 +900,11 @@ view: webinardata3 {
   dimension: reg_email {
     type: string
     sql: ${TABLE}."REG_EMAIL" ;;
+  }
+
+  dimension: upper_reg_email {
+    type: string
+    sql: UPPER(${TABLE}."REG_EMAIL") ;;
   }
 
   measure: count_distint_registration_email {
