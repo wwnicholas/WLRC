@@ -49,6 +49,10 @@ explore: buildingwebinar {
   }
 }
 
+explore: webinar_transaction_fact {
+
+  }
+
 explore: wlrc_data {
   join: building {
     type: left_outer
