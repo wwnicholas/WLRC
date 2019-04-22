@@ -6,10 +6,10 @@ view: webinar_transaction_fact {
     derived_table: {
       explore_source: webinardata3 {
         column: filedate {}
-        column: mem_email_1 {}
+        column: upper_reg_email {}
 
         derived_column: order_sequence {
-          sql: row_number() over (partition by mem_email_1 order by filedate ) ;;
+          sql: row_number() over (partition by upper_reg_email order by filedate ) ;;
         }
 
       }
@@ -22,5 +22,5 @@ view: webinar_transaction_fact {
   }
 
     dimension: filedate {}
-    dimension: mem_email_1 {}
+    dimension: upper_reg_email {}
   }
