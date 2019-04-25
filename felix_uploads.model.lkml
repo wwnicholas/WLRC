@@ -17,16 +17,6 @@ explore: sku_metrix_test {}
 
 explore: amz_upload_test {}
 
-explore: nicholas_upload {}
-
-explore: webinardata {
-  join: buildingwebinar {
-    type: left_outer
-    sql_on: mem ${webinardata.mem_matched_inst_id}=${buildingwebinar.matched_inst_pin} ;;
-    relationship: many_to_many
-  }
-}
-
 explore: webinardata3 {
   join: buildingwebinar {
     type: left_outer
